@@ -1,0 +1,75 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+abbr,
+address,
+img,
+ul,
+li,
+form,
+label,
+article,
+embed,
+figure,
+figcaption,
+footer,
+header,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+
+img {
+    display: block;
+    width: 100%;
+
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+a {
+    outline: none;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    border: none;
+}
+
+*,
+html {
+    box-sizing: border-box;
+    font-size: 14px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    color: var(--hero-text-color);
+    background: #EEEEEE;
+}
