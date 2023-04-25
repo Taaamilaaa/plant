@@ -1,7 +1,7 @@
-:root{
+:root {
     --accent-color: #156963;
-    --text-color: #2C1500;
+    --text-color: #2c1500;
+    --background-color: #f3f4f6;
 
-    --border: 1px solid #E0E0E0;
-    
+    --border: 1px solid #e0e0e0;
 }
