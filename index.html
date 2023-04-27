@@ -58,9 +58,7 @@
             </header>
             <main>
                 <section class="hero">
-                    <div class="hero__img-container">
-                        <img class="hero__img" src="./images/hero_img_1.png" alt="" />
-                    </div>
+                    <div class="hero__img-container"></div>
                     <div class="hero__contents-container">
                         <div class="hero__contents">
                             <h1 class="hero__title animate__animated animate__slideInRight">
@@ -75,7 +73,7 @@
 
                         <ul class="hero__button-list">
                             <li>
-                                <button class="hero__button prevBtn">
+                                <button class="hero__button prevBtn" disabled>
                                     <div class="button__action-name">
                                         <svg>
                                             <use href="./images/sprite.svg#arrow_back"></use>
@@ -94,7 +92,7 @@
                                         </svg>
                                     </div>
 
-                                    <p class="nextName">Rahasia Plant</p>
+                                    <p class="nextName">Sanseviera is an evergreen plant</p>
                                 </button>
                             </li>
                         </ul>
@@ -153,80 +151,26 @@
                     <div class="plants__header">
                         <h3>Featured Plants</h3>
                         <select class="plants__header-select" name="select">
-                            <option value="cheaper" selected>Cheaper First</option>
+                            <option value="all" selected>All</option>
+                            <option value="cheaper">Cheaper First</option>
                             <option value="expensive">Expensive First</option>
                             <option value="stock">In Stock</option>
                         </select>
                     </div>
                     <hr />
+
                     <ul class="plants__list">
                         <li class="plants__list-item">
                             <div class="plants__item-img__container">
                                 <img
                                     class="plants__item-img"
-                                    src="./images/goods_kaktus_1.png"
+                                    src="./images/mint/mint_1.jpg"
                                     alt=""
                                 />
                             </div>
 
                             <div class="plants__item-contents">
                                 <p class="plants__item-name">Kaktus Plants</p>
-                                <span class="plants__item-price">IDR 85.000</span>
-                            </div>
-                        </li>
-                        <li class="plants__list-item">
-                            <div class="plants__item-img__container">
-                                <img
-                                    class="plants__item-img"
-                                    src="./images/goods_kaktus_2.png"
-                                    alt=""
-                                />
-                            </div>
-
-                            <div class="plants__item-contents">
-                                <p class="plants__item-name">Landak Plants</p>
-                                <span class="plants__item-price">IDR 85.000</span>
-                            </div>
-                        </li>
-                        <li class="plants__list-item">
-                            <div class="plants__item-img__container">
-                                <img
-                                    class="plants__item-img"
-                                    src="./images/goods_kaktus_3.png"
-                                    alt=""
-                                />
-                            </div>
-
-                            <div class="plants__item-contents">
-                                <p class="plants__item-name">Kecubung Plants</p>
-                                <span class="plants__item-price">IDR 85.000</span>
-                            </div>
-                        </li>
-                        <li class="plants__list-item">
-                            <div class="plants__item-img__container">
-                                <img
-                                    class="plants__item-img"
-                                    src="./images/goods_kaktus_4.png"
-                                    alt=""
-                                />
-                            </div>
-
-                            <div class="plants__item-contents">
-                                <p class="plants__item-name">Kecubung Plants</p>
-                                <span class="plants__item-price">IDR 85.000</span>
-                            </div>
-                        </li>
-                        <li class="plants__list-item">
-                            <div class="plants__item-img__container">
-                                <img
-                                    class="plants__item-img"
-                                    src="./images/goods_kaktus_5.png"
-                                    alt=""
-                                />
-                            </div>
-
-                            <div class="plants__item-contents">
-                                <p class="plants__item-name">Kecubung Plants</p>
                                 <span class="plants__item-price">IDR 85.000</span>
                             </div>
                         </li>
@@ -298,4 +242,10 @@
         referrerpolicy="no-referrer"
     ></script>
     <script src="./js/index.js" type="module"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
 </html>

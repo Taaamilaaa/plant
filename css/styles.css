@@ -115,18 +115,21 @@ header button {
 
 .hero__img-container {
     min-width: 608px;
-}
-.hero__img-container img {
-    height: 100%;
+    height: 785px;
+    background-image: url(../images/hero_img_1.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .hero__contents-container {
     min-width: 672px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hero__contents {
     padding: 186px 72px 0px 77px;
-    margin-bottom: 110px;
 }
 
 .hero__title {
@@ -147,18 +150,11 @@ header button {
 }
 
 .hero__button-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
 }
-
-.hero__button {
-    display: block;
+.hero__button-list li {
     width: 100%;
-    padding: 40px 49px 38px;
-    font-style: normal;
-    font-weight: 500;
-    text-align: left;
-    transition: background-color 0.35s linear, color 0.35s linear;
 }
 
 .button__action-name {
@@ -193,12 +189,33 @@ header button {
     line-height: 39px;
     color: var(--accent-color);
 }
-.hero__button-list button:hover {
+.hero__button {
+    display: block;
+    width: 100%;
+    height: 202px;
+    padding: 40px 49px 38px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+    transition: background-color 0.35s linear, color 0.35s linear;
+}
+.hero__button:disabled:hover {
+    background-color: var(--accent-color-disabled);
+}
+
+.hero__button:disabled {
+    background-color: #33333356;
+}
+.hero__button:disabled:hover p {
+    color: var(--accent-color);
+}
+.hero__button:hover {
     background-color: var(--accent-color);
 }
-.hero__button-list button:hover p {
+.hero__button:hover p {
     color: #ffffff;
 }
+
 /* advantages */
 .advantages {
     margin-bottom: 80px;
@@ -268,7 +285,6 @@ header button {
 .plants__header-select {
     font-size: 12px;
     line-height: 15px;
-
     color: #000000;
 }
 hr {
@@ -284,11 +300,12 @@ hr {
 
 .plants__item-img__container {
     height: 217px;
-}
-.plants__item-img {
-    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: var(--background-color);
 }
+
 .plants__item-contents {
     padding-top: 16px;
     text-align: center;

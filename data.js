@@ -1,27 +1,374 @@
 export const imgPath = [
     {
-    name: "Kembang Flower Mantap",
-    path: "./images/hero_img_1.png"
-    },
-        {
-    name: "Rahasia Plant",
-    path: "./images/hero_img_2.jpg"
-    },
+        name: 'Kembang Flower Mantap',
+        path: './images/hero_img_1.png',
+        goods: [
             {
-    name: "Monster",
-    path: "./images/hero_img_3.jpg"
-    },
+                name: 'Peppermint Mojito',
+                price: 68,
+                imgPath: './images/mint/mint_1.jpg',
+                stock: true,
+            },
             {
-    name: "Heather or indoor ivy",
-    path: "./images/hero_img_4.jpg"
-    },
+                name: 'Moroccan spike mint',
+                price: 110,
+                imgPath: './images/mint/mint_2.jpg',
+                stock: true,
+            },
             {
-     name: "Miniature rose",
-     path: "./images/hero_img_5.jpg"
-     },
-             {
-     name: "Kaktus Plant",
-     path: "./images/hero_img_6.jpg"
- },
-    
-]
+                name: 'Mint Hybrid Mojito',
+                price: 80,
+                imgPath: './images/mint/mint_3.jpeg',
+                stock: true,
+            },
+            {
+                name: 'Genovese basil',
+                price: 90,
+                imgPath: './images/mint/mint_4.jpg',
+                stock: true,
+            },
+            {
+                name: 'Peppermint',
+                price: 115,
+                imgPath: './images/mint/mint_5.jpg',
+                stock: true,
+            },
+            {
+                name: 'Ginger mint',
+                price: 110,
+                imgPath: './images/mint/mint_6.jpg',
+                stock: true,
+            },
+            {
+                name: 'Lemon balm',
+                price: 50,
+                imgPath: './images/mint/mint_7.jpg',
+                stock: true,
+            },
+            {
+                name: 'Pinapple Mint',
+                price: 120,
+                imgPath: './images/mint/mint_8.jpg',
+                stock: true,
+            },
+               {
+                name: 'Corsican mint',
+                price: 200,
+                imgPath: './images/mint/mint_9.jpg',
+                stock: true,
+            },
+        ],
+    },
+    {
+        name: 'Sanseviera is an evergreen plant',
+        path: './images/hero_img_2.jpg',
+        goods: [
+            {
+                name: 'Sansevieria Laurenti',
+                price: 2550,
+                imgPath: './images/sansevieria/sansevieria_1.jpg',
+                stock: true,
+            },
+            {
+                name: 'Set of 6 sansevieria "Assorted"',
+                price: 12080,
+                imgPath: './images/sansevieria/sansevieria_2.jpg',
+                stock: true,
+            },
+            {
+                name: 'Sansevieria Futura Superba "Duet"',
+                price: 600,
+                imgPath: './images/sansevieria/sansevieria_3.jpg',
+                stock: true,
+            },
+            {
+                name: 'Sansevieria Star Canyon Granite',
+                price: 210,
+                imgPath: './images/sansevieria/sansevieria_4.jpg',
+                stock: true,
+            },
+            {
+                name: 'Sansevieria Zelanika',
+                price: 2507,
+                imgPath: './images/sansevieria/sansevieria_5.jpg',
+                stock: true,
+            },
+            {
+                name: 'Sansevieria Zelanika in a gray pot',
+                price: 2341,
+                imgPath: './images/sansevieria/sansevieria_6.jpg',
+                stock: true,
+            },
+            {
+                name: 'Sansevieria three-striped',
+                price: 2600,
+                imgPath: './images/sansevieria/sansevieria_7.jpg',
+                stock: true,
+            },
+            {
+                name: 'Sansevieria three-striped',
+                price: 1080,
+                imgPath: './images/sansevieria/sansevieria_8.jpg',
+                stock: true,
+            },
+        ],
+    },
+    {
+        name: 'Monstera tropical plant',
+        path: './images/hero_img_3.jpg',
+        goods: [
+            {
+                name: 'Monstera is delicate',
+                price: 550,
+                imgPath: './images/monstera/monstera_1.jpg',
+                stock: true,
+            },
+            {
+                name: 'Monstera Deliciosa',
+                price: 950,
+                imgPath: './images/monstera/monstera_2.jpg',
+                stock: true,
+            },
+            {
+                name: 'Monster Adanson',
+                price: 250,
+                imgPath: './images/monstera/monstera_3.jpg',
+                stock: true,
+            },
+            {
+                name: 'Monstera in a pot',
+                price: 150,
+                imgPath: './images/monstera/monstera_4.jpg',
+                stock: true,
+            },
+            {
+                name: 'Monstera Deliciosa',
+                price: 120,
+                imgPath: './images/monstera/monstera_5.jpg',
+                stock: true,
+            },
+            {
+                name: 'Monstera in a clay pot',
+                price: 350,
+                imgPath: './images/monstera/monstera_6.jpg',
+                stock: true,
+            },
+            {
+                name: 'Monstera variegate',
+                price: 280,
+                imgPath: './images/monstera/monstera_7.jpg',
+                stock: true,
+            },
+            {
+                name: 'Monstera Deliciosa',
+                price: 958,
+                imgPath: './images/monstera/monstera_8.jpg',
+                stock: true,
+            },
+        ],
+    },
+    {
+        name: 'Heather or indoor ivy',
+        path: './images/hero_img_4.jpg',
+        goods: [
+            {
+                name: 'Common ivy',
+                price: 150,
+                imgPath: './images/ivy/ivy_1.jpg',
+                stock: true,
+            },
+            {
+                name: 'Hedera canariensis',
+                price: 110,
+                imgPath: './images/ivy/ivy_2.jpg',
+                stock: true,
+            },
+            {
+                name: 'Hedera Rhombea',
+                price: 180,
+                imgPath: './images/ivy/ivy_3.jpg',
+                stock: true,
+            },
+            {
+                name: 'Algerian ivy',
+                price: 210,
+                imgPath: './images/ivy/ivy_4.jpg',
+                stock: true,
+            },
+            {
+                name: 'Variegated ivy',
+                price: 140,
+                imgPath: './images/ivy/ivy_5.jpg',
+                stock: true,
+            },
+            {
+                name: 'Common ivy',
+                price: 230,
+                imgPath: './images/ivy/ivy_6.jpg',
+                stock: true,
+            },
+            {
+                name: 'Wax ivy',
+                price: 317,
+                imgPath: './images/ivy/ivy_7.jpg',
+                stock: true,
+            },
+            {
+                name: 'Hedera ivy "Duet',
+                price: 80,
+                imgPath: './images/ivy/ivy_8.jpg',
+                stock: true,
+            },
+            {
+                name: 'Wax ivy in the shape of a circle',
+                price: 280,
+                imgPath: './images/ivy/ivy_9.jpg',
+                stock: true,
+            },
+            {
+                name: 'Golden epipremnum',
+                price: 450,
+                imgPath: './images/ivy/ivy_10.jpg',
+                stock: true,
+            },
+        ],
+    },
+    {
+        name: 'Miniature indoor rose',
+        path: './images/hero_img_5.jpg',
+        goods: [
+            {
+                name: 'Indoor rose "Beauty"',
+                price: 310,
+                imgPath: './images/rose/rose_1.jpg',
+                stock: true,
+            },
+            {
+                name: 'Composition of roses in two clay pots',
+                price: 2810,
+                imgPath: './images/rose/rose_2.jpg',
+                stock: true,
+            },
+            {
+                name: 'Bordeaux rose',
+                price: 310,
+                imgPath: './images/rose/rose_3.jpg',
+                stock: true,
+            },
+            {
+                name: 'Pink indoor rose',
+                price: 250,
+                imgPath: './images/rose/rose_4.jpg',
+                stock: true,
+            },
+            {
+                name: 'Indoor bush rose',
+                price: 210,
+                imgPath: './images/rose/rose_5.jpg',
+                stock: true,
+            },
+            {
+                name: 'Tornado rose',
+                price: 510,
+                imgPath: './images/rose/rose_6.jpg',
+                stock: true,
+            },
+            {
+                name: 'Pink rose in a cup',
+                price: 420,
+                imgPath: './images/rose/rose_7.jpg',
+                stock: true,
+            },
+            {
+                name: 'Pink bush rose',
+                price: 110,
+                imgPath: './images/rose/rose_8.jpg',
+                stock: true,
+            },
+            {
+                name: 'Rose Snow White',
+                price: 610,
+                imgPath: './images/rose/rose_9.jpg',
+                stock: true,
+            },
+            {
+                name: 'Infinity White Rose',
+                price: 450,
+                imgPath: './images/rose/rose_10.jpg',
+                stock: true,
+            },
+            {
+                name: 'Golden Wedding Rose',
+                price: 310,
+                imgPath: './images/rose/rose_11.jpg',
+                stock: true,
+            },
+        ],
+    },
+    {
+        name: 'Kaktus Plant',
+        path: './images/hero_img_6.jpg',
+        goods: [
+            {
+                name: 'Composition of cacti and succulents',
+                price: 3510,
+                imgPath: './images/kaktus/kaktus_1.jpg',
+                stock: true,
+            },
+            {
+                name: 'Echinocactus Gruson mini',
+                price: 60,
+                imgPath: './images/kaktus/kaktus_2.jpg',
+                stock: true,
+            },
+            {
+                name: 'Prickly pear in a set with succulents',
+                price: 2310,
+                imgPath: './images/kaktus/kaktus_3.jpg',
+                stock: true,
+            },
+            {
+                name: 'Cereus Yamakaru',
+                price: 1310,
+                imgPath: './images/kaktus/kaktus_4.jpg',
+                stock: true,
+            },
+            {
+                name: 'Cereus Yamakaru + Prickly pear in a stone pot',
+                price: 1610,
+                imgPath: './images/kaktus/kaktus_5.jpg',
+                stock: true,
+            },
+            {
+                name: 'Opuntia microdasis',
+                price: 310,
+                imgPath: './images/kaktus/kaktus_6.jpg',
+                stock: true,
+            },
+            {
+                name: 'Cactus mix',
+                price: 1390,
+                imgPath: './images/kaktus/kaktus_7.jpg',
+                stock: true,
+            },
+            {
+                name: 'Echinopsis tube-flowered trio',
+                price: 310,
+                imgPath: './images/kaktus/kaktus_8.jpg',
+                stock: true,
+            },
+            {
+                name: 'Echinocactus Gruzon + Opuntia microdasis + Mammillaria elongata',
+                price: 310,
+                imgPath: './images/kaktus/kaktus_9.jpg',
+                stock: true,
+            },
+            {
+                name: 'Echinocactus Gruzon',
+                price: 310,
+                imgPath: './images/kaktus/kaktus_10.jpg',
+                stock: true,
+            },
+        ],
+    },
+];
