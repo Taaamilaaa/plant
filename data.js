@@ -1,7 +1,7 @@
 export const imgPath = [
     {
         name: 'Kembang Flower Mantap',
-        path: './images/hero_img_1.png',
+        path: './images/hero_img_1.png',        
         goods: [
             {
                 name: 'Peppermint Mojito',
@@ -19,13 +19,13 @@ export const imgPath = [
                 name: 'Mint Hybrid Mojito',
                 price: 80,
                 imgPath: './images/mint/mint_3.jpeg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Genovese basil',
                 price: 90,
                 imgPath: './images/mint/mint_4.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Peppermint',
@@ -43,7 +43,7 @@ export const imgPath = [
                 name: 'Lemon balm',
                 price: 50,
                 imgPath: './images/mint/mint_7.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Pinapple Mint',
@@ -85,7 +85,7 @@ export const imgPath = [
                 name: 'Sansevieria Star Canyon Granite',
                 price: 210,
                 imgPath: './images/sansevieria/sansevieria_4.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Sansevieria Zelanika',
@@ -109,7 +109,7 @@ export const imgPath = [
                 name: 'Sansevieria three-striped',
                 price: 1080,
                 imgPath: './images/sansevieria/sansevieria_8.jpg',
-                stock: true,
+                stock: false,
             },
         ],
     },
@@ -133,7 +133,7 @@ export const imgPath = [
                 name: 'Monster Adanson',
                 price: 250,
                 imgPath: './images/monstera/monstera_3.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Monstera in a pot',
@@ -145,7 +145,7 @@ export const imgPath = [
                 name: 'Monstera Deliciosa',
                 price: 120,
                 imgPath: './images/monstera/monstera_5.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Monstera in a clay pot',
@@ -157,7 +157,7 @@ export const imgPath = [
                 name: 'Monstera variegate',
                 price: 280,
                 imgPath: './images/monstera/monstera_7.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Monstera Deliciosa',
@@ -181,7 +181,7 @@ export const imgPath = [
                 name: 'Hedera canariensis',
                 price: 110,
                 imgPath: './images/ivy/ivy_2.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Hedera Rhombea',
@@ -199,7 +199,7 @@ export const imgPath = [
                 name: 'Variegated ivy',
                 price: 140,
                 imgPath: './images/ivy/ivy_5.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Common ivy',
@@ -217,7 +217,7 @@ export const imgPath = [
                 name: 'Hedera ivy "Duet',
                 price: 80,
                 imgPath: './images/ivy/ivy_8.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Wax ivy in the shape of a circle',
@@ -241,7 +241,7 @@ export const imgPath = [
                 name: 'Indoor rose "Beauty"',
                 price: 310,
                 imgPath: './images/rose/rose_1.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Composition of roses in two clay pots',
@@ -265,7 +265,7 @@ export const imgPath = [
                 name: 'Indoor bush rose',
                 price: 210,
                 imgPath: './images/rose/rose_5.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Tornado rose',
@@ -283,7 +283,7 @@ export const imgPath = [
                 name: 'Pink bush rose',
                 price: 110,
                 imgPath: './images/rose/rose_8.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Rose Snow White',
@@ -319,7 +319,7 @@ export const imgPath = [
                 name: 'Echinocactus Gruson mini',
                 price: 60,
                 imgPath: './images/kaktus/kaktus_2.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Prickly pear in a set with succulents',
@@ -343,7 +343,7 @@ export const imgPath = [
                 name: 'Opuntia microdasis',
                 price: 310,
                 imgPath: './images/kaktus/kaktus_6.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Cactus mix',
@@ -361,7 +361,7 @@ export const imgPath = [
                 name: 'Echinocactus Gruzon + Opuntia microdasis + Mammillaria elongata',
                 price: 310,
                 imgPath: './images/kaktus/kaktus_9.jpg',
-                stock: true,
+                stock: false,
             },
             {
                 name: 'Echinocactus Gruzon',
