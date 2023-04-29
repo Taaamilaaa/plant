@@ -1,69 +1,110 @@
 import { refs } from './refs.js';
 import { imgPath } from '../data.js';
-import {listOfCards} from './goods.js'
+import { listOfCards } from './goods.js';
 
+let current;
+let currentIndex ;
 let prevIndex = imgPath.length - 1;
-let currentIndex = 0;
 let nextIndex = 1;
 
+//LocalStorage
+window.addEventListener('load', getInfoFromLS);
+
+const firstLoad = () => {
+    localStorage.setItem('currentEl', JSON.stringify(imgPath[0].name));
+    localStorage.setItem('currentIndex', JSON.stringify(0));
+    current = imgPath[0].name; 
+    currentIndex = 0; 
+};
+
+const followingLoad = () => {
+    current = JSON.parse(localStorage.getItem('currentEl'));
+    currentIndex = imgPath.findIndex(el => { 
+        if (el.name === current) {
+            return el;
+        }else if (currentIndex !== 0) {
+        refs.heroBtnPrev.disabled = false;
+    }
+    })
+};
+
+function getInfoFromLS(e) {
+    const currentEl = JSON.parse(localStorage.getItem('currentEl'));
+
+    if (currentEl === null) {
+        firstLoad();
+    } else if (currentEl !== null) {
+        followingLoad();
+        replaceContents()
+
+    }
+}
+
+//кнопки вперед та назад
 refs.heroBtnNext.addEventListener('click', onNextBtnClick);
 refs.heroBtnPrev.addEventListener('click', onPrevBtnClick);
 
 //next
 function onNextBtnClick(e) {
-    const currentTitle = refs.heroTitle.textContent.trim();
-    findNextIndex(currentTitle, e);
+    current = JSON.parse(localStorage.getItem('currentEl'));
+    findNextIndex(e);
     if (refs.heroBtnPrev.disabled === true) {
         refs.heroBtnPrev.disabled = false;
     }
-
-   
 }
+
+const nextBtn = current => {
+    imgPath.forEach((el, index) => {
+        if (el.name === current) {
+            currentIndex = index + 1;
+            prevIndex = currentIndex - 1;
+            nextIndex = currentIndex + 1;
+
+            if (currentIndex === imgPath.length - 1) {
+                refs.heroBtnNext.disabled = true;
+                nextIndex = 0;
+            }            
+            setCurrentData(imgPath[currentIndex].name, currentIndex);
+        }
+    });
+};
 
 //prev
 function onPrevBtnClick(e) {
-    const currentTitle = refs.heroTitle.textContent.trim();
-    findNextIndex(currentTitle, e);
+    current = JSON.parse(localStorage.getItem('currentEl'));
+    findNextIndex(e);
     if (refs.heroBtnNext.disabled === true) {
         refs.heroBtnNext.disabled = false;
     }
 }
 
-function findNextIndex(currentTitle, e) {
+const prevBtn = current => {
+    imgPath.forEach((el, index) => {
+        if (el.name === current) {
+            currentIndex = index - 1;
+            prevIndex = currentIndex - 1;
+            nextIndex = currentIndex + 1;
+
+            if (currentIndex === 0) {
+                refs.heroBtnPrev.disabled = true;
+                prevIndex = imgPath.length - 1;
+            }
+          
+            setCurrentData(imgPath[currentIndex].name, currentIndex);
+        }
+    });
+};
+
+function findNextIndex(e) {
     if (e.currentTarget === refs.heroBtnNext) {
-        imgPath.forEach((el, index) => {
-            if (el.name === currentTitle) {
-                currentIndex = index + 1;
-                prevIndex = currentIndex - 1;
-                nextIndex = currentIndex + 1;
-
-                if (currentIndex === imgPath.length - 1) {
-                    refs.heroBtnNext.disabled = true;
-                    nextIndex = 0;
-                }
-            }
-        });
-
-
+        nextBtn(current);
     } else if (e.currentTarget === refs.heroBtnPrev) {
-        imgPath.forEach((el, index) => {
-            if (el.name === currentTitle) {
-                currentIndex = index - 1;
-                prevIndex = currentIndex - 1;
-                nextIndex = currentIndex + 1;
-
-                if (currentIndex === 0) {
-                    refs.heroBtnPrev.disabled = true;
-                    prevIndex = imgPath.length - 1;
-                }
-            }
-        });
+        prevBtn(current);
     }
     replaceContents();
-
-    
 }
 
+//заміна контенту
 function replaceContents() {
     imgPath.forEach((el, index) => {
         if (index === currentIndex) {
@@ -79,13 +120,12 @@ function replaceContents() {
                 refs.nextName.textContent = imgPath[imgPath.length - 2].name;
             }
 
-          listOfCards(el.goods)
+            listOfCards(el.goods);
         }
-       
     });
 }
-
-
-
-
-
+//записує дані елемента 
+function setCurrentData(title, index) {
+    localStorage.setItem('currentEl', JSON.stringify(title));
+    localStorage.setItem('currentIndex', JSON.stringify(index));
+}

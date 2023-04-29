@@ -7,10 +7,10 @@ export const refs = {
     heroBtnNext: document.querySelector('.nextBtn'),
     heroBtnPrev: document.querySelector('.prevBtn'),
 
-    plantsContainer: document.querySelectorAll('.plants__item-img__container'),
     plantsList: document.querySelector('.plants__list'),
     select: document.querySelector('.plants__header-select'),
-    // plantsName: document.querySelectorAll('.plants__item-name'),
-    // plantsPrice: document.querySelectorAll('plants__item-price'),
+
+    serchBtn: document.querySelector("serch"),
+   
 
 }

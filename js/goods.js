@@ -1,12 +1,11 @@
 import { refs } from './refs.js';
 import { imgPath } from '../data.js';
 
-//рендер карточок товарів при загрузці сторінки:
-
 window.addEventListener('load', loadGoodsCards);
+refs.select.addEventListener('change', sortGoodsCard);
+let selectVal = refs.select.value;
 
-//шаблон карточки товару
-const card = el => {
+const cardTemplate = el => {
     return `<li class="plants__list-item">
                 <div class="plants__item-img__container" style = "background-image: url(${el.imgPath})">
 
@@ -19,7 +18,6 @@ const card = el => {
             </li>`;
 };
 
-//при загрузці виявляє currentTitle в майбутньому з локалсторейдж
 function loadGoodsCards(e) {
     const currentTitle = refs.heroTitle.textContent.trim();
     imgPath.find(el => {
@@ -30,27 +28,22 @@ function loadGoodsCards(e) {
     });
 }
 
-//значення селекту
-let flagValue = refs.select.value;
-
-//формує список карточок товарів та підставляє його в html
 export function listOfCards(list) {
     let item = [];
-    const sortedList = sorter(list, flagValue);
+    const sortedList = sorter(list, selectVal);
 
     sortedList.forEach(el => {
-        const listItem = card(el);
+        const listItem = cardTemplate(el);
         item.push(listItem);
     });
 
     refs.plantsList.innerHTML = item.join('');
 }
 
-//вертає сортований масив елементів у відповідності з значенням селекту
-const sorter = (allGoods, flagValue) => {
+const sorter = (allGoods, selectVal) => {
     let sortedGoods;
 
-    switch (flagValue) {
+    switch (selectVal) {
         case 'cheaper':
             sortedGoods = allGoods.sort((a, b) => {
                 return a.price - b.price;
@@ -77,17 +70,11 @@ const sorter = (allGoods, flagValue) => {
     return sortedGoods;
 };
 
-//додає слухача на селект
-refs.select.addEventListener('change', sortGoodsCard);
-
-//зміенює значення flagValue та сортує список елементів
 function sortGoodsCard(e) {
-    flagValue = e.currentTarget.value;
-
-    const currentTitle = refs.heroTitle.textContent.trim();
+    selectVal = e.currentTarget.value;
 
     imgPath.forEach(el => {
-        if (el.name === currentTitle) {
+        if (el.name === refs.heroTitle.textContent.trim()) {
             listOfCards(el.goods);
         }
     });
