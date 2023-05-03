@@ -119,6 +119,7 @@ header button {
     background-image: url(../images/hero_img_1.png);
     background-size: cover;
     background-position: center;
+    transition: all 0.35s linear, color 0.35s linear;
 }
 
 .hero__contents-container {
@@ -141,6 +142,7 @@ header button {
     line-height: 83px;
     color: var(--accent-color);
     margin-bottom: 24px;
+    transition: all 0.35s linear, color 0.35s linear;
 
     animation-duration: 1s;
     animation-name: slide-in;

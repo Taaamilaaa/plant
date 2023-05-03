@@ -1,7 +1,7 @@
 import { refs } from './refs.js';
 import { imgPath } from '../data.js';
 import { listOfCards } from './goods.js';
-import { heroTitleOutAnimate, heroTitleInAnimate } from './animation.js';
+import { heroTitleOutAnimate} from './animation.js';
 
 let current;
 let currentIndex;
@@ -108,10 +108,10 @@ function findNextIndex(e) {
     if (e.currentTarget === refs.heroBtnNext) {
         nextBtn(current);
       
-        setTimeout(replaceContents, 1000)
+        setTimeout(replaceContents, 950)
     } else if (e.currentTarget === refs.heroBtnPrev) {
         prevBtn(current);
-        setTimeout(replaceContents, 1000)
+        setTimeout(replaceContents, 950)
     }
 
 
@@ -119,6 +119,7 @@ function findNextIndex(e) {
 
 //заміна контенту
 function replaceContents() {    
+   
     imgPath.forEach((el, index) => {
         if (index === currentIndex) {
             refs.heroImg.style.backgroundImage = `url(${el.path})`;
@@ -130,7 +131,6 @@ function replaceContents() {
                 refs.nextName.textContent = imgPath[nextIndex].name;
             } else {
                 refs.previousName.textContent = imgPath[imgPath.length - 1].name;
-
                 refs.nextName.textContent = imgPath[imgPath.length - 2].name;
             }
 
