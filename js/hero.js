@@ -1,9 +1,10 @@
 import { refs } from './refs.js';
 import { imgPath } from '../data.js';
 import { listOfCards } from './goods.js';
+import { heroTitleOutAnimate, heroTitleInAnimate } from './animation.js';
 
 let current;
-let currentIndex ;
+let currentIndex;
 let prevIndex = imgPath.length - 1;
 let nextIndex = 1;
 
@@ -13,19 +14,23 @@ window.addEventListener('load', getInfoFromLS);
 const firstLoad = () => {
     localStorage.setItem('currentEl', JSON.stringify(imgPath[0].name));
     localStorage.setItem('currentIndex', JSON.stringify(0));
-    current = imgPath[0].name; 
-    currentIndex = 0; 
+    current = imgPath[0].name;
+    currentIndex = 0;
 };
 
 const followingLoad = () => {
     current = JSON.parse(localStorage.getItem('currentEl'));
-    currentIndex = imgPath.findIndex(el => { 
+
+    currentIndex = imgPath.findIndex(el => {
         if (el.name === current) {
             return el;
-        }else if (currentIndex !== 0) {
-        refs.heroBtnPrev.disabled = false;
+        } else if (currentIndex !== 0) {
+            refs.heroBtnPrev.disabled = false;
+        }
+    });
+    if (currentIndex === imgPath.length - 1) {
+        refs.heroBtnNext.disabled = true;
     }
-    })
 };
 
 function getInfoFromLS(e) {
@@ -35,8 +40,7 @@ function getInfoFromLS(e) {
         firstLoad();
     } else if (currentEl !== null) {
         followingLoad();
-        replaceContents()
-
+        replaceContents();
     }
 }
 
@@ -47,10 +51,12 @@ refs.heroBtnPrev.addEventListener('click', onPrevBtnClick);
 //next
 function onNextBtnClick(e) {
     current = JSON.parse(localStorage.getItem('currentEl'));
-    findNextIndex(e);
+
     if (refs.heroBtnPrev.disabled === true) {
         refs.heroBtnPrev.disabled = false;
     }
+
+    findNextIndex(e);
 }
 
 const nextBtn = current => {
@@ -63,7 +69,8 @@ const nextBtn = current => {
             if (currentIndex === imgPath.length - 1) {
                 refs.heroBtnNext.disabled = true;
                 nextIndex = 0;
-            }            
+            }
+
             setCurrentData(imgPath[currentIndex].name, currentIndex);
         }
     });
@@ -89,26 +96,33 @@ const prevBtn = current => {
                 refs.heroBtnPrev.disabled = true;
                 prevIndex = imgPath.length - 1;
             }
-          
+
             setCurrentData(imgPath[currentIndex].name, currentIndex);
         }
     });
 };
 
 function findNextIndex(e) {
+    heroTitleOutAnimate();
+
     if (e.currentTarget === refs.heroBtnNext) {
         nextBtn(current);
+      
+        setTimeout(replaceContents, 1000)
     } else if (e.currentTarget === refs.heroBtnPrev) {
         prevBtn(current);
+        setTimeout(replaceContents, 1000)
     }
-    replaceContents();
+
+
 }
 
 //заміна контенту
-function replaceContents() {
+function replaceContents() {    
     imgPath.forEach((el, index) => {
         if (index === currentIndex) {
             refs.heroImg.style.backgroundImage = `url(${el.path})`;
+
             refs.heroTitle.textContent = el.name;
 
             if (currentIndex > 0) {
@@ -124,7 +138,7 @@ function replaceContents() {
         }
     });
 }
-//записує дані елемента 
+//записує дані елемента
 function setCurrentData(title, index) {
     localStorage.setItem('currentEl', JSON.stringify(title));
     localStorage.setItem('currentIndex', JSON.stringify(index));

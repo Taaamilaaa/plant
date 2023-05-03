@@ -134,12 +134,25 @@ header button {
 
 .hero__title {
     display: block;
+    width: 100%;
     font-style: normal;
     font-weight: 500;
     font-size: 68px;
     line-height: 83px;
     color: var(--accent-color);
     margin-bottom: 24px;
+
+    animation-duration: 1s;
+    animation-name: slide-in;
+}
+@keyframes slide-in {
+    from {
+        margin-left: 150%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
 }
 
 .hero__text {
