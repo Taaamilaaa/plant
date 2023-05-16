@@ -11,7 +11,8 @@ function filterData(e) {
     if (refs.serchFormInput.value !== '' && refs.serchFormInput.value.trim().length > 2) {
         imgPath.forEach(element => {
             element.goods.filter(el => {
-                if (el.name.includes(refs.serchFormInput.value)) {
+               
+                if (el.name.toLowerCase().includes(refs.serchFormInput.value.toLowerCase().trim())) {
                     arr.push(el);
                 }
             });
@@ -20,12 +21,15 @@ function filterData(e) {
     notification(arr);
 }
 function notification(elements) {
-    console.log(elements);
-    if (elements.length < 2) {
+    
+    if (elements.length < 1) {
         refs.modalInfo.textContent = 'нічого не знайдено';
-    } else if (elements.length > 2 && elements.length !== 0) {
+        refs.modalList.innerHTML = null;
+    } else if (elements.length !== 0) {
         refs.modalInfo.textContent = `ми знайшли ${elements.length} збігів`;
         refs.modalList.innerHTML = listForming(elements);
+        refs.modalButttonsList.style.display = "flex"
+        
     }
 }
 

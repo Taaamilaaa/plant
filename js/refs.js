@@ -19,6 +19,7 @@ export const refs = {
     serchForm: document.querySelector('.serch__form'),
     serchFormInput: document.querySelector('.serch__form-input'),
     modalInfo: document.querySelector('.modal__info'),
-modalList: document.querySelector('.modal__list')
+    modalList: document.querySelector('.modal__list'),
+modalButttonsList: document.querySelector('.modal__buttons-list')
     
 }

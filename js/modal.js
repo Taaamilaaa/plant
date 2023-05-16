@@ -22,8 +22,12 @@ function modalClose(e) {
             refs.modal.style.backgroundColor = '#00000000';
         }, 500)
          setTimeout(() => {
-          refs.modal.style.transform = 'translate(-120%)';
+             refs.modal.style.transform = 'translate(-120%)';
+             refs.serchFormInput.value = null;
+             refs.modalList.innerHTML = null;
+             refs.modalInfo.textContent = '';
         }, 1250);
         
     }
+    
 }
