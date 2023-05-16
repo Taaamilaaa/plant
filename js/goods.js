@@ -5,16 +5,17 @@ window.addEventListener('load', loadGoodsCards);
 refs.select.addEventListener('change', sortGoodsCard);
 let selectVal = refs.select.value;
 
-const cardTemplate = el => {
+export const cardTemplate = el => {
     return `<li class="plants__list-item">
+              
                 <div class="plants__item-img__container" style = "background-image: url(${el.imgPath})">
-
                 </div>
 
                 <div class="plants__item-contents">
                         <p class="plants__item-name">${el.name}</p>
                     <span class="plants__item-price">${el.price} грн</span>
                 </div>
+                
             </li>`;
 };
 

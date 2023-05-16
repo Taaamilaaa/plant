@@ -37,7 +37,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="header__btn-text">
+                                    <button class="header__btn-text basket">
                                         <svg>
                                             <use href="./images/sprite.svg#shopping"></use>
                                         </svg>
@@ -59,6 +59,7 @@
             <main>
                 <section class="hero">
                     <div class="hero__img-container"></div>
+
                     <div class="hero__contents-container">
                         <div class="hero__contents">
                             <h1 class="hero__title">Kembang Flower Mantap</h1>
@@ -97,7 +98,7 @@
                         </ul>
                     </div>
                 </section>
-                <section class="advantages container__addition">
+                <section class="advantages container__addition _anim-items _anim-no-hide">
                     <ul class="advantages__list">
                         <li class="advantages__list-item">
                             <div class="advantages__title-container">
@@ -157,25 +158,9 @@
                         </select>
                     </div>
                     <hr />
-
-                    <ul class="plants__list">
-                        <li class="plants__list-item">
-                            <div class="plants__item-img__container">
-                                <img
-                                    class="plants__item-img"
-                                    src="./images/mint/mint_1.jpg"
-                                    alt=""
-                                />
-                            </div>
-
-                            <div class="plants__item-contents">
-                                <p class="plants__item-name">Kaktus Plants</p>
-                                <span class="plants__item-price">IDR 85.000</span>
-                            </div>
-                        </li>
-                    </ul>
+                    <ul class="plants__list"></ul>
                 </section>
-                <section class="about container__addition">
+                <section class="about container__addition _anim-items _anim-no-hide">
                     <div class="about__contents-container">
                         <div class="about__contents">
                             <h2>
@@ -190,16 +175,15 @@
                             </p>
                         </div>
 
-                        <div>
+                        <div class="about__contents-img">
                             <img src="./images/about_img_1.png" alt="" />
                         </div>
                     </div>
-                    <div>
+                    <div class="about__contents-img">
                         <img src="./images/about_img_2.png" alt="" />
                     </div>
                 </section>
-
-                <section class="call container__addition">
+                <section class="call container__addition _anim-items _anim-no-hide">
                     <div class="call__contents-container">
                         <h2>
                             Get your favourites plant on <br />
@@ -223,22 +207,40 @@
                             <a href="tel: +380631967820">+380631967820</a>
                             <a href="mailto: tamila.yudina@gmail.com">tamila.yudina@gmail.com</a>
                         </li>
-                        <li class="footer__list-item">
-                            <span class="footer__item-title">dfff</span>
-                        </li>
-                        <li class="footer__list-item">
-                            <span class="footer__item-title">dfff</span>
-                        </li>
                     </ul>
                 </div>
             </footer>
         </div>
+
+        <div class="modal">
+            <div class="modal__container">
+                <button class="modal__container-btn">
+                    <svg>
+                        <use href="./images/sprite.svg#cancel"></use>
+                    </svg>
+                </button>
+                <form action="" class="serch__form">
+                    <h2>Find goods by plant`s name</h2>
+                    <div class="modal__form-content">
+                        <input type="text" class="serch__form-input" />
+
+                        <button type="submit" class="form__btn">
+                            <svg>
+                                <use href="./images/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <p class="modal__info"></p>
+                        <ul class="modal__list"></ul>
+                    </div>
+                </form>
+            </div>
+        </div>
     </body>
-    <!-- <script
+    <script
         src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.43/polyfill.min.js"
         integrity="sha512-lvWiOP+aMKHllm4THsjzNleVuGOh0WGniJ3lgu/nvCbex1LlaQSxySUjAu/LTJw9FhnSL/PVYoQcckg1Q03+fQ=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
-    ></script> -->
+    ></script>
     <script src="./js/index.js" type="module"></script>
 </html>

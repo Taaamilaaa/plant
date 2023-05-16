@@ -16,6 +16,7 @@ const firstLoad = () => {
     localStorage.setItem('currentIndex', JSON.stringify(0));
     current = imgPath[0].name;
     currentIndex = 0;
+    
 };
 
 const followingLoad = () => {
@@ -31,6 +32,7 @@ const followingLoad = () => {
     if (currentIndex === imgPath.length - 1) {
         refs.heroBtnNext.disabled = true;
     }
+    nextIndex = currentIndex === imgPath.length - 1 ? 0 : currentIndex + 1
 };
 
 function getInfoFromLS(e) {

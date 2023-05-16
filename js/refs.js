@@ -10,7 +10,15 @@ export const refs = {
     plantsList: document.querySelector('.plants__list'),
     select: document.querySelector('.plants__header-select'),
 
-    serchBtn: document.querySelector("serch"),
-   
+    animItems: document.querySelectorAll('._anim-items'),
 
+    serchBtn: document.querySelector(".serch"),
+    modal: document.querySelector('.modal'),
+   modalContainer: document.querySelector('.modal__container'),
+    modalBtn: document.querySelector('.modal__container-btn'),
+    serchForm: document.querySelector('.serch__form'),
+    serchFormInput: document.querySelector('.serch__form-input'),
+    modalInfo: document.querySelector('.modal__info'),
+modalList: document.querySelector('.modal__list')
+    
 }
