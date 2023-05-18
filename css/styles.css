@@ -452,17 +452,25 @@ h3 ~ .footer__item-title {
 .footer__list-item a:last-of-type {
     margin-bottom: 0;
 }
-.modal {
+
+.modal,
+.modal__basket {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background: #00000000;
-
+}
+.modal {
     transform: translate(-120%);
 }
-.modal__container {
+.modal__basket {
+    transform: translate(120%);
+}
+
+.modal__container,
+.modal__container-basket {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -473,7 +481,7 @@ h3 ~ .footer__item-title {
     padding: 50px;
     text-align: center;
 }
-.modal__container h2 {
+.modal-title {
     margin-bottom: 50px;
     color: var(--accent-color);
 }
@@ -539,6 +547,7 @@ h3 ~ .footer__item-title {
 .modal__list-item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 8px;
 }
 
@@ -551,7 +560,7 @@ h3 ~ .footer__item-title {
     border-bottom: var(--border);
 }
 .modal__list {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 .modal__item-name {
     width: 100%;
@@ -611,11 +620,25 @@ h3 ~ .footer__item-title {
     margin-left: auto;
 }
 .modal__button-addition {
-    height: 40px;
+    font-size: 20px;
+    padding: 15px 20px;
+    width: fit-content;
+    border: var(--border);
+    transition: all 0.8s ease 0s;
+}
+.modal__button-addition:hover,
+.modal__button-addition:focus {
+    background-color: var(--accent-color);
+    color: #ffffff;
 }
 .modal__buttons-list {
     display: none;
-
     flex-direction: row;
     justify-content: space-between;
+}
+.goods__img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-right: 20px;
 }

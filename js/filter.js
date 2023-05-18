@@ -1,6 +1,6 @@
 import { refs } from './refs.js';
 import { imgPath } from '../data.js';
-import { cardTemplate } from './goods.js';
+// import { cardTemplate } from './goods.js';
 
 refs.serchForm.addEventListener('submit', filterData);
 
@@ -19,25 +19,27 @@ function filterData(e) {
         });
     }
     notification(arr);
+   
+   
 }
 function notification(elements) {
     
     if (elements.length < 1) {
         refs.modalInfo.textContent = 'нічого не знайдено';
         refs.modalList.innerHTML = null;
+        refs.modalButttonsList.style.display = "none"
     } else if (elements.length !== 0) {
         refs.modalInfo.textContent = `ми знайшли ${elements.length} збігів`;
         refs.modalList.innerHTML = listForming(elements);
-        refs.modalButttonsList.style.display = "flex"
+        refs.modalButttonsList.style.display = "flex";
         
     }
 }
-
 function listTemplate(el) {
     return `<li class="modal__list-item">
 
    <div class="modal__item">
-<input class = "modal__checkbox" type="checkbox" name=${el.id} id=${el.id}>  
+  <input class = "modal__checkbox" type="checkbox" name=${el.id} id=${el.id} value=${el.id}>  
       
    <label class="modal__item-name" for=${el.id}>
    <p>${el.name}</p>
