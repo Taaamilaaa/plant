@@ -27,7 +27,9 @@ export const refs = {
     modalContainerBasket: document.querySelector('.modal__container-basket'),
 
     modalGoodsList: document.querySelector('.modal__basket-list'),
-    modalBasketInfo: document.querySelector('.modal__basket-info')
+    modalBasketInfo: document.querySelector('.modal__basket-info'),
+    goodsCards: document.querySelectorAll(".plants__list-item"),
+    totalPrice: document.querySelector('.modal__basket-totlPrice')
 };
 
    

@@ -1,12 +1,13 @@
 import { refs } from './refs.js';
 import { imgPath } from '../data.js';
+import {addGoodsFromList} from './addGoodsToLS.js'
 
 window.addEventListener('load', loadGoodsCards);
 refs.select.addEventListener('change', sortGoodsCard);
 let selectVal = refs.select.value;
 
 export const cardTemplate = el => {
-    return `<li class="plants__list-item">
+    return `<li class="plants__list-item" id=${el.id}>
               
                 <div class="plants__item-img__container" style = "background-image: url(${el.imgPath})">
                 </div>
@@ -39,6 +40,10 @@ export function listOfCards(list) {
     });
 
     refs.plantsList.innerHTML = item.join('');
+    const listItems = document.querySelectorAll('.plants__list-item')
+    listItems.forEach(el => {
+        el.addEventListener('click', addGoodsFromList)
+    })
 }
 
 const sorter = (allGoods, selectVal) => {

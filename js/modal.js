@@ -59,6 +59,8 @@ function closeBasket() {
     }, 500);
     setTimeout(() => {
         refs.modalBasket.style.transform = 'translate(120%)';
+        refs.modalGoodsList.innerHTML = null
+        // refs.
     }, 1250);
 }
 function closeSerch() {

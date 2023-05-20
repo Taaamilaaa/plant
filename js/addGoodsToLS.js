@@ -3,6 +3,8 @@ import { refs } from "./refs.js";
 
 refs.modalAddGoodsBtn.addEventListener('click', addGoods);
 
+
+
 function addGoods(e) {
     let elObj = refs.serchForm.elements
     let checkedItems = []
@@ -23,9 +25,17 @@ function storagefilter(arr) {
         localStorage.setItem('goodsId', JSON.stringify(arr));
        
     } else if (goods) {
-     
-         localStorage.setItem('goodsId', JSON.stringify([...goods, ...arr]));
+        const allGoods = [...goods, ...arr]
+        console.log(allGoods);
+         localStorage.setItem('goodsId', JSON.stringify(allGoods));
     }
     
 
+}
+
+export function addGoodsFromList(e) {
+    let arr = [];
+    arr.push(e.currentTarget.id);
+
+     storagefilter(arr) 
 }
